@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+    <Version>23.11.19.3</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="IronPython" Version="3.4.1">
+    </PackageReference>
+    <PackageReference Include="IronPython.Interpreter" Version="2.7.4">
+    </PackageReference>
+    <PackageReference Include="IronPython.StdLib" Version="3.4.1">
+    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0">
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
+  </PropertyGroup>
+</Project>
