@@ -1,3 +1,5 @@
+namespace SunamoPython;
+
 public class PythonInstance
 {
     private readonly CompiledCode compiled;
